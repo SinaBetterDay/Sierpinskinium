@@ -1,1 +1,1 @@
-# Sierpinskinium-
+# Sierpinskinium
