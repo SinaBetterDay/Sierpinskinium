@@ -7,25 +7,26 @@
 
 namespace sf
 {
-class SFML_GRAPHICS_API RectangleShape : public Shape 
-{
-public:
+   class SFML_GRAPHICS_API RectangleShape : public Shape 
+   {
+      public:
 
-   explicit RectangleShape(const Vector2f& size = Vector2f(0, 0));
+      explicit RectangleShape(const Vector2f& size = Vector2f(0, 0));
     
-   void setSize(const Vector2f& size);
+      void setSize(const Vector2f& size);
     
-        const Vector2f& getSize() const;
+      const Vector2f& getSize() const;
     
-       virtual std::size_t getPointCount() const;
+      virtual std::size_t getPointCount() const;
    
-       virtual Vector2f getPoint(std::size_t index) const;
+      virtual Vector2f getPoint(std::size_t index) const;
    
-   private:
+      private:
    
-      // Member data
+ // Member data
+ 
       Vector2f m_size; 
-  };
-  } // namespace sf
+   };
+} // namespace sf
 
 #endif // SFML_RECTANGLESHAPE_HPP
