@@ -11,7 +11,7 @@ using namespace sf;
 int main() {
 	// this basically opens a window
 	VideoMode vm(1920, 1080);
-	RenderWindow window(vm, "No, no..... no", Style::Fullscreen);
+	RenderWindow window(vm, "Chaos Game", Style::Fullscreen);
 	RectangleShape rectangle;
 
 	vector<Vector2f> vertices;
@@ -29,6 +29,17 @@ int main() {
 			window.close();
 		}
 
+		Font font;
+		Text text;
+		Text text1;
+		font.loadFromFile("./fonts/Game Of Squids.ttf");
+		text.setFont(font);
+		text.setString("Welcome to the Chaos Game! \nPress 3 points for the veritices and once more to begin the game! \nTo quit the game press ESC");
+		text.setPosition(20, 20);
+		text.setCharacterSize(20);
+		//text.setFillColor(Color::Blue);
+		window.draw(text);
+		window.display();
 
 		while (window.pollEvent(event)) // first loop that gets inputs
 		{
@@ -87,9 +98,9 @@ int main() {
 			//cout << "scale_factor" << scale_factor << endl;
 			cout << "midpoint_x: " << midpoint_x << endl;
 			cout << "midpoint_y: " << midpoint_y << endl << endl;
-			
+
 			points.push_back(Vector2f(midpoint_x, midpoint_y));
-			
+
 			sleep(seconds(0.0069));
 
 		}
@@ -110,7 +121,7 @@ int main() {
 		/// triangle now we have a while loop that goes through with the
 		/// algorithm and draw a triangle
 
-		
+
 		for (int i = 0; i < vertices.size(); i++)
 		{
 			RectangleShape dot(Vector2f(5, 5));
@@ -126,8 +137,6 @@ int main() {
 			dot.setFillColor(Color::Magenta);
 			window.draw(dot);
 		}
-		
-
 
 		// Show everything that we drew
 		window.display();
