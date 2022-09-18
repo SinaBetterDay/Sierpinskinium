@@ -32,7 +32,7 @@ int main() {
 		Font font;
 		Text text;
 		Text text1;
-		font.loadFromFile("./fonts/Game Of Squids.ttf");
+		font.loadFromFile("./font/Game Of Squids.ttf");
 		text.setFont(font);
 		text.setString("Welcome to the Chaos Game! \nPress 3 points for the veritices and once more to begin the game! \nTo quit the game press ESC");
 		text.setPosition(20,20);
