@@ -9,7 +9,7 @@ using namespace std;
 using namespace sf;
 
 int main() {
-	// this basically opens a window
+	// open a window
 	VideoMode vm(1920, 1080);
 	RenderWindow window(vm, "Chaos Game", Style::Fullscreen);
 	RectangleShape rectangle;
@@ -21,10 +21,8 @@ int main() {
 
 	while (window.isOpen()) {
 
-		// events aka mouse button etc.. 
 		Event event;
 
-		//handle inputs? idk
 		if (Keyboard::isKeyPressed(Keyboard::Escape)) {
 			window.close();
 		}
@@ -81,10 +79,10 @@ int main() {
 
 		if (points.size() > 0)
 		{
-			///generate more points
+			//generate more points
 			//select random vertex
 			//calculate midpoints between random vertex and the last point in the vector
-			///push back to the newly generated coord.
+			//push back to the newly generated coord.
 
 
 			midpoint_x = (points[points.size() - 1].x + vertices[vert_select].x) /2;
