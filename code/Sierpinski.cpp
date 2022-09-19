@@ -9,9 +9,9 @@ using namespace std;
 using namespace sf;
 
 int main() {
-	// open a window
+	// this basically opens a window
 	VideoMode vm(1920, 1080);
-	RenderWindow window(vm, "Milla The Rock Game", Style::Fullscreen);
+	RenderWindow window(vm, "No, no..... no", Style::Fullscreen);
 	RectangleShape rectangle;
 
 	vector<Vector2f> vertices;
@@ -30,13 +30,19 @@ int main() {
 		Font font;
 		Text text;
 		Text text1;
-		font.loadFromFile("./font/Game Of Squids.ttf");
+
+		font.loadFromFile("./fonts/Game Of Squids.ttf");
 		text.setFont(font);
-		text.setString("Welcome to the Chaos Game! \nPress 3 points for the veritices and once more to begin the game! \nTo quit the game press ESC");
-		text.setPosition(20,20);
+		text1.setFont(font);
+		text.setString("\n\nPress 3 points for the veritices and once more to begin the game! \n                         To quit the game press ESC");
+		text.setPosition(500,20);
 		text.setCharacterSize(20);
+		text1.setString("Welcome to the Chaos Game!");
+		text1.setPosition(480, 20);
+		text1.setCharacterSize(50);
 		//text.setFillColor(Color::Blue);
 		window.draw(text);
+		window.draw(text1);
 		window.display();
 
 		while (window.pollEvent(event)) // first loop that gets inputs
@@ -76,14 +82,12 @@ int main() {
 		//double scale_factor = 0.5;
 
 
-
 		if (points.size() > 0)
 		{
-			//generate more points
+			///generate more points
 			//select random vertex
 			//calculate midpoints between random vertex and the last point in the vector
-			//push back to the newly generated coord.
-
+			///push back to the newly generated coord.
 
 			midpoint_x = (points[points.size() - 1].x + vertices[vert_select].x) /2;
 			midpoint_y = (points[points.size() - 1].y + vertices[vert_select].y) /2;
@@ -135,6 +139,7 @@ int main() {
 			dot.setFillColor(Color::Magenta);
 			window.draw(dot);
 		}
+		
 
 		// Show everything that we drew
 		window.display();
