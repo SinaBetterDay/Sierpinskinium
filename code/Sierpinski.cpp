@@ -11,7 +11,7 @@ using namespace sf;
 int main() {
 	// open a window
 	VideoMode vm(1920, 1080);
-	RenderWindow window(vm, "Chaos Game", Style::Fullscreen);
+	RenderWindow window(vm, "Milla The Rock Game", Style::Fullscreen);
 	RectangleShape rectangle;
 
 	vector<Vector2f> vertices;
