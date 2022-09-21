@@ -31,7 +31,7 @@ int main() {
 		Text text;
 		Text text1;
 
-		font.loadFromFile("./fonts/Game Of Squids.ttf");
+		font.loadFromFile("./font/Game Of Squids.ttf");
 		text.setFont(font);
 		text1.setFont(font);
 		text.setString("\n\nPress 3 points for the veritices and once more to begin the game! \n                         To quit the game press ESC");
